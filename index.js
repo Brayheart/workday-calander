@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-  // $('.save-center'.click(function() {
-  //   alert( "Handler for .click() called." );
-  // }))
+  $(".fa-save").click(function(event){
+    console.log($(event.target).parent().parent().prev().children().val())
+  })
 });
