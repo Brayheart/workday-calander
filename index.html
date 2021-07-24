@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./index.css">
   <script src="https://use.fontawesome.com/9cf0c99be6.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <title>Work Day Scheduler</title>
 </head>
 <body>
@@ -15,13 +16,13 @@
   <div id='header'>
     <h1>Work Day Scheduler</h1>
     <h3>A Simple Calander App</h3>
-    <p>Date: Today's Date</p>
+    <p id='date'>Date: Today's Date</p>
   </div>
 
   <div class="container">
     <div class="row no-padding">
       <div class="col-2 text-center text-time">
-        <p class='time'>9AM</p>
+        <p class='time' >9AM</p>
       </div>
       <div class="col-8">
         <textarea id='9AM' class='form-control'></textarea>
@@ -35,7 +36,7 @@
 
     <div class="row no-padding">
       <div class="col-2 text-center text-time">
-        <p class='time'>10AM</p>
+        <p class='time' >10AM</p>
       </div>
       <div class="col-8">
         <textarea id='10AM' class='form-control'></textarea>
@@ -49,7 +50,7 @@
 
     <div class="row no-padding">
       <div class="col-2 text-center text-time">
-        <p class='time'>11AM</p>
+        <p class='time' >11AM</p>
       </div>
       <div class="col-8">
         <textarea id='11AM' class='form-control'></textarea>
@@ -63,7 +64,7 @@
 
     <div class="row no-padding">
       <div class="col-2 text-center text-time">
-        <p class='time'>12AM</p>
+        <p class='time' >12AM</p>
       </div>
       <div class="col-8">
         <textarea id='12PM' class='form-control'></textarea>
@@ -77,7 +78,7 @@
 
     <div class="row no-padding">
       <div class="col-2 text-center text-time">
-        <p class='time'>1PM</p>
+        <p class='time' >1PM</p>
       </div>
       <div class="col-8">
         <textarea id='1PM' class='form-control'></textarea>
@@ -91,7 +92,7 @@
 
     <div class="row no-padding">
       <div class="col-2 text-center text-time">
-        <p class='time'>2PM</p>
+        <p class='time' >2PM</p>
       </div>
       <div class="col-8">
         <textarea id='2PM' class='form-control'></textarea>
@@ -105,7 +106,7 @@
 
     <div class="row no-padding">
       <div class="col-2 text-center text-time">
-        <p class='time'>3PM</p>
+        <p class='time' >3PM</p>
       </div>
       <div class="col-8">
         <textarea id='3PM' class='form-control'></textarea>
@@ -119,7 +120,7 @@
 
     <div class="row no-padding">
       <div class="col-2 text-center text-time">
-        <p class='time'>4PM</p>
+        <p class='time' >4PM</p>
       </div>
       <div class="col-8">
         <textarea id='4PM' class='form-control'></textarea>
@@ -133,7 +134,7 @@
 
     <div class="row no-padding">
       <div class="col-2 text-center text-time">
-        <p class='time'>5PM</p>
+        <p class='time' >5PM</p>
       </div>
       <div class="col-8">
         <textarea id='5PM' class='form-control'></textarea>
