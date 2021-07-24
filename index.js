@@ -17,17 +17,13 @@ $( document ).ready(function() {
 
 for (const property in notes) {
   console.log(`${property}: ${notes[property]}`);
-  // var timeblock = property.slice(0, property.length - 2)
-  // console.log(timeblock, hour)
-  // console.log($(property))
   $(`#${property}`)[0].value = notes[property]
 }
 
 Array.from($('textarea')).forEach(el => {
   var timeblock = el.getAttribute('data-time')
   timeblock = parseInt(timeblock)
-
-  // console.log(el)
+  
   if(timeblock < hour){
     $(`#${el.getAttribute('id')}`)[0].removeAttribute("class")
     $(`#${el.getAttribute('id')}`)[0].setAttribute('class','form-control past')
@@ -40,8 +36,6 @@ Array.from($('textarea')).forEach(el => {
   }
 
 })
-
-
 
   $(".fa-save").click(function(event){
     var text = $(event.target).parent().parent().prev().children().val()
