@@ -16,14 +16,13 @@ $( document ).ready(function() {
   } 
 
 for (const property in notes) {
-  console.log(`${property}: ${notes[property]}`);
   $(`#${property}`)[0].value = notes[property]
 }
 
 Array.from($('textarea')).forEach(el => {
   var timeblock = el.getAttribute('data-time')
   timeblock = parseInt(timeblock)
-  
+
   if(timeblock < hour){
     $(`#${el.getAttribute('id')}`)[0].removeAttribute("class")
     $(`#${el.getAttribute('id')}`)[0].setAttribute('class','form-control past')
@@ -42,7 +41,6 @@ Array.from($('textarea')).forEach(el => {
     var time = $(event.target).parent().parent().prev().prev().children().text()
     notes[time] = text
     localStorage.setItem('notes', JSON.stringify(notes))
-    // console.log(notes)
   })
 
 });
