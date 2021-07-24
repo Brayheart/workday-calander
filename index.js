@@ -1,5 +1,6 @@
 $( document ).ready(function() {
-  var hour = moment().format("h");
+  var hour = moment().format("H");
+  hour = parseInt(hour)
 
   $('#date').text(moment().format("dddd, MMMM Do YYYY"))
   var notes = JSON.parse(localStorage.getItem('notes')) || {
@@ -18,13 +19,29 @@ for (const property in notes) {
   console.log(`${property}: ${notes[property]}`);
   // var timeblock = property.slice(0, property.length - 2)
   // console.log(timeblock, hour)
-
-
   // console.log($(property))
   $(`#${property}`)[0].value = notes[property]
 }
 
-console.log($('.form-control'))
+Array.from($('textarea')).forEach(el => {
+  var timeblock = el.getAttribute('data-time')
+  timeblock = parseInt(timeblock)
+
+  // console.log(el)
+  if(timeblock < hour){
+    $(`#${el.getAttribute('id')}`)[0].removeAttribute("class")
+    $(`#${el.getAttribute('id')}`)[0].setAttribute('class','form-control past')
+  } else if(timeblock === hour){
+    $(`#${el.getAttribute('id')}`)[0].removeAttribute("class")
+    $(`#${el.getAttribute('id')}`)[0].setAttribute('class','form-control present')
+  } else {
+    $(`#${el.getAttribute('id')}`)[0].removeAttribute("class")
+    $(`#${el.getAttribute('id')}`)[0].setAttribute('class','form-control future')
+  }
+
+})
+
+
 
   $(".fa-save").click(function(event){
     var text = $(event.target).parent().parent().prev().children().val()

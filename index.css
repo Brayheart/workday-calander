@@ -49,10 +49,11 @@ textarea{
 
 .past {
   background-color: lightgray;
+  border-bottom: 1px solid white;
 }
 
 .present{
-  background-color: lightpink;
+  background-color: red;
 }
 
 .future{
